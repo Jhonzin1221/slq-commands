@@ -10,7 +10,7 @@ CREATE TABLE Alunos(
 
 -- alterar nome da tabela
 ALTER TABLE alunos
-CHANGE nnome_pessoal VARCHAR(255);
+CHANGE nome_pessoal VARCHAR(255);
 
 -- mudar nome de tabela
 RENAME TABLE aluno TO alunos;
@@ -23,6 +23,11 @@ ADD descrição VARCHAR(255);
 UPDATE Clientes
 SET Nome = 'Cliente VIP'
 WHERE Idade > 30;
+
+-- Atualização de idade
+UPDATE nome_tabela
+SET idade = '00'
+WHERE id = 00
 
 --comando para inserir dados em uma tabela
 INSERT INTO alunos (nome, email)
@@ -38,3 +43,13 @@ SELECT nome, email FROM alunos WHERE email = 'rg@gmail.com'; --selecionar um usu
 
 SELECT * FROM alunos WHERE nome = 'nome' AND senha = '1234'
 SELECT * FROM alunos WHERE nome = 'nome' OR senha = '1234'
+
+-- codigo utilizado para negar uma condição, retornando registros que não atendem a essa condição
+SELECT * FROM usuarios WHERE NOT nome = "pedro";
+
+-- codigos utilizados para ordenar do menor para o maior
+SELECT nome FROM usuarios ORDER BY nome ASC;
+SELECT nome FROM usuarios ORDER BY nome;
+
+-- busca usuarios com idade entre 20 e 30 anos
+SELECT * FROM nome_tabela WHERE idade = 20 AND 30;
