@@ -30,12 +30,15 @@ SET idade = '00'
 WHERE id = 00
 
 --comando para inserir dados em uma tabela
-INSERT INTO alunos (nome, email)
+INSERT INTO clientes (nome, email)
 VALUES
-('joao','j@gmail.com');
-('joao','j@gmail.com');
-('joao','j@gmail.com');
-('joao','j@gmail.com');
+('joao','j@gmail.com','joao9292'),
+('maria','m@gmail.com','maria5323'),
+('pedro','p@gmail.com','pedro9090'),
+('ricardo','r@gmail.com','ricardo9076'),
+('bruno','b@gmail.com','bruno7456'),
+('cristian','c@gmail.com','cristian9482'),
+('téo','t@gmail.com','téo2121');
 
 -- deletar usuario
 DELETE FROM Alunos WHERE id = 1;
@@ -57,6 +60,29 @@ SELECT nome FROM usuarios ORDER BY nome;
 
 -- busca usuarios com idade entre 20 e 30 anos
 SELECT * FROM nome_tabela WHERE idade = 20 AND 30;
+
+-- relacionamento de tabelas
+
+CREATE TABLE pedidos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_pedido VARCHAR(255) NOT NULL,
+    id_cliente INT,
+    FOREIGN KEY(id_cliente) REFERENCES clientes(id)
+); 
+
+-- fazer consulta dos usuarios
+SELECT DISTINCT u.id, u.nome, u.email
+FROM usuarios u
+JOIN postagens p ON u.id = p.usuario_id;
+
+
+
+SELECT nome, nome_pedido FROM clientes
+INNER JOIN pedidos ON clientes.id = pedidos.id_clientes
+WHERE nome_pedido = "pizza"
+
+
+
 
 
 
