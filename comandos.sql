@@ -31,7 +31,11 @@ WHERE id = 00
 
 --comando para inserir dados em uma tabela
 INSERT INTO alunos (nome, email)
-VALUES ('joao','j@gmail.com');
+VALUES
+('joao','j@gmail.com');
+('joao','j@gmail.com');
+('joao','j@gmail.com');
+('joao','j@gmail.com');
 
 -- deletar usuario
 DELETE FROM Alunos WHERE id = 1;
@@ -53,3 +57,9 @@ SELECT nome FROM usuarios ORDER BY nome;
 
 -- busca usuarios com idade entre 20 e 30 anos
 SELECT * FROM nome_tabela WHERE idade = 20 AND 30;
+
+git init
+git config --global user.name "Jhonzin1221"
+git config --global user.email "jhonatanmoura1221@gmail.com"
+git add .
+git push
