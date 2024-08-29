@@ -58,8 +58,11 @@ SELECT nome FROM usuarios ORDER BY nome;
 -- busca usuarios com idade entre 20 e 30 anos
 SELECT * FROM nome_tabela WHERE idade = 20 AND 30;
 
+
+
+-- minhas configurações git para fazer upload dos meus codigos
 git init
-git config --global user.name "Jhonzin1221"
-git config --global user.email "jhonatanmoura1221@gmail.com"
+git config --global user.name ""
+git config --global user.email ""
 git add .
 git push
